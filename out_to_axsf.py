@@ -24,7 +24,6 @@ def read_out(filename):
                 parts = lines[i+1+j].split()
                 symbol = parts[0]
 
-                # 숫자로 된 경우 기호로 변환
                 if symbol.isdigit():
                     atomic_num = int(symbol)
                     symbol = chemical_symbols[atomic_num]
@@ -43,5 +42,7 @@ def read_out(filename):
     return frames
 
 # 사용 예시
-frames = read_out("VII_3b_md.out")
+frames = read_out("file.out")
 view(frames)
+
+
